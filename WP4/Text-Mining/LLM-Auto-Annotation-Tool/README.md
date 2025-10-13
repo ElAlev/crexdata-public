@@ -99,12 +99,31 @@ Features:
 - Uses any HugginFace sentence transformer model (sbert) for feature extraction.
 - Uses a threshold to filter texts label quality scores that don't meet your requirements. So, they can be re-labelled.
 
-Usage:
-Before use, ensure the LABEL_CLEANING_CONFIG in the config.py file has the correct ``` data_text_header, and data_label_header```
+Before use:
+- Ensure the LABEL_CLEANING_CONFIG in the config.py file has the correct ``` data_text_header, and data_label_header```
+- Also ensure you have an embedder model download, in the models directory.
 
+The ```src/run_cleanlab_data_cleaning.py``` script accepts the following parameters:
+```bash
+-f, --file-path - The full path of the (.tsv) to clean with cleanlab. ex. data/filename.tsv
+-s, --score-threshold - A float value between [0.0 - 1] to use as label quality threshold. Data samples with label quality (provided by cleanlab) below this threshold are also considered error labels (recommendation: 0.3)
+--relabel - Flag to enable re-labelling error labels found in dataset.
+```
+
+Usage Examples:
+
+Label cleaning without re-labelling:
 ```bash
 python src/run_cleanlab_data_cleaning.py -f data/filename.tsv -s 0.3
 ```
+Note, dataset will be split into filename_clean.tsv and filename_dirty.tsv
+
+Label cleaning with re-labelling:
+```bash
+python src/run_cleanlab_data_cleaning.py -f data/filename.tsv -s 0.3 --relabel
+```
+Note, output will be filename_cleaned.tsv
+
 
 ## License
 
