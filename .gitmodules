@@ -6,3 +6,7 @@
 	path = WP2/use-cases/health-crisis/episim-emews
 	url = https://github.com/Epi-Sim/episim-emews
 	branch = main
+[submodule "WP2/use-cases/health-crisis/episim-rl"]
+	path = WP2/use-cases/health-crisis/episim-rl
+	url = https://github.com/Epi-Sim/episim-rl
+	branch = main
