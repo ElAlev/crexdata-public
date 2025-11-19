@@ -35,6 +35,11 @@ class CrawlerManager:
             logger.info(f"Process {crawl_id} is already running.")
             return
 
+        if crawl_id.strip() == "":
+            print(f"Blank crawl ID.")
+            logger.info(f"Blank crawl ID.")
+            return
+
         extra_args = []
         if command_data["crawl_params.lang"] == "None": 
             extra_args = []

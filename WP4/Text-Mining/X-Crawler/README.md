@@ -104,6 +104,3 @@ python test/test.produce.py --id flood_barcelona_250724 --case kill
 
 Apache 2.0
 
-## Authors
-
-- Jonathan Orama: jonathan.ayebakuro@bsc.es

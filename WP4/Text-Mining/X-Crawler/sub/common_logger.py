@@ -48,14 +48,6 @@ class KafkaHandler(logging.Handler):
         finally:
             self.release()
             
-# def setup_logging(name=None):
-#     kafka_handler = KafkaHandler()
-#     kafka_handler.setLevel(logging.DEBUG)
-#     formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-#     kafka_handler.setFormatter(formatter)
-#     logging.basicConfig(handlers=[kafka_handler],level=logging.DEBUG,force=True)
-#     return logging.getLogger()
-
 
 def setup_logging(name="logger_none", level=logging.DEBUG):
     logger = logging.getLogger(name)
@@ -69,10 +61,4 @@ def setup_logging(name="logger_none", level=logging.DEBUG):
         logger.propagate = False 
     return logger
             
-# def setup_logging():
-#     log_file = f'./logs/log_{time.strftime("%Y%m%d")}.log'
-#     format = "%(asctime)s - %(levelname)s - %(message)s"
-#     logging.basicConfig(filename=log_file, 
-#                         level=logging.INFO, format=format)
-#     return logging.getLogger()
     

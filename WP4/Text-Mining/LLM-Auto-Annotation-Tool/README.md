@@ -129,6 +129,3 @@ Note, output will be filename_cleaned.tsv
 
 Apache 2.0
 
-## Authors
-
-- Jonathan Orama: jonathan.ayebakuro@bsc.es
