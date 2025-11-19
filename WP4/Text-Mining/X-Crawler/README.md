@@ -7,7 +7,6 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [License](#license)
-- [Authors](#authors)
 
 ## Description
 This is a X crawling toolkit setup in a docker container. It receives commands from a Kafka Topic to start crawling posts from a particular {Lat, Lon} and then saves the posts to another Kafka Topic. It is setup like this so it can be run on a remote server.

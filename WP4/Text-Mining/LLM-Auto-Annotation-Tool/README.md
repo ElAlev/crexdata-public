@@ -7,7 +7,6 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [License](#license)
-- [Authors](#authors)
 
 ## Description
 This is a tool to suggest labels / annotate text for training models for text classification. It uses an LLM and a well defined prompt for a particular usecase (ex. in our case, it is used for Crisis Text Annotation) to annotate texts.

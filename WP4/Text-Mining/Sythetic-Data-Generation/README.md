@@ -7,7 +7,6 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [License](#license)
-- [Authors](#authors)
 
 ## Description
 Generates a fixed amount of sythetic tweets using an LLM. Tweets are based on four prompt types:
