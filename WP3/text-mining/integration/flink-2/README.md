@@ -22,7 +22,7 @@ This is a pyflink setup in a docker container. It automatically processes social
 - Windows: [Guide](https://docs.docker.com/desktop/setup/install/windows-install/)
 - Ubuntu: [Guide](https://docs.docker.com/engine/install/ubuntu/)
 
-### Configure Crawler
+### Configure and Setup
 As a requirement you need a running kafka cluster setup using SASL_SSL. If you don't want to use authentication, when starting the job send an unautheticated server as parameter, and also set this in the config.
 
 The configuration is found in the *CONFIGURATION* in *./shared/relevance_job_utils/relevance-job-testing-async.py*
@@ -51,6 +51,8 @@ CREXDATA_AUTH = {
 Edit the texts enclosed in *<>*, also set *AUTHENTICATED* to *False* if using an unautheticated server.
 
 Then, add permission files (.jks) in kafka_auth_files directory, the kafka.truststore.jks, and kafka.keystore.jks files are needed. 
+
+Finally, rename extensions of *flink-sql-connector-kafka-4.0.0-2.0.jar.keep*, and *kafka-clients-4.0.0.jar.keep* to *.jar* in *./shared/relevance_job_utils/*.
 
 ## Usage
 Build and Run the Container:
